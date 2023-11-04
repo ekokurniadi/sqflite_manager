@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:retina/retina.dart';
 import 'package:sqflite/sqlite_api.dart';
 
 class RawQueryPage extends StatefulWidget {
@@ -96,7 +95,7 @@ class _RawQueryPageState extends State<RawQueryPage> {
 
   Widget _buildResult() {
     if (this._isQueryRunning) {
-      return const RTLoadingIndicator();
+      return const CircularProgressIndicator();
     }
 
     if (this._error != null) {
